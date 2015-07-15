@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5E5CEA41E12D3044F21BE450 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF94A34C792C1EF63A5A9E1 /* libPods.a */; };
+		F33B2A261B568C6300D98209 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A251B568C6300D98209 /* Product.m */; };
+		F33B2A2B1B568E9C00D98209 /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F33B2A2A1B568E9C00D98209 /* libobjc.A.dylib */; };
+		F33B2A311B568FD800D98209 /* PGObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A301B568FD800D98209 /* PGObjectMapping.m */; };
+		F33B2A341B56972000D98209 /* PGRelationshipMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A331B56972000D98209 /* PGRelationshipMapping.m */; };
+		F33B2A371B569D7000D98209 /* NSString+PG.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A361B569D7000D98209 /* NSString+PG.m */; };
+		F33B2A3B1B56A5FF00D98209 /* PGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A3A1B56A5FF00D98209 /* PGUtils.m */; };
+		F33B2A401B56BC2E00D98209 /* Price.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A3F1B56BC2E00D98209 /* Price.m */; };
+		F33B2A431B56BC7C00D98209 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A421B56BC7C00D98209 /* Image.m */; };
+		F33B2A471B56BCA400D98209 /* Option.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A461B56BCA400D98209 /* Option.m */; };
 		F3525F101B56855D006867A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3525F0F1B56855D006867A2 /* main.m */; };
 		F3525F131B56855D006867A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3525F121B56855D006867A2 /* AppDelegate.m */; };
 		F3525F161B56855D006867A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3525F151B56855D006867A2 /* ViewController.m */; };
@@ -30,6 +39,24 @@
 /* Begin PBXFileReference section */
 		2AF94A34C792C1EF63A5A9E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF7DA326440AA4E37B3947A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F33B2A241B568C6300D98209 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = ../Product.h; sourceTree = "<group>"; };
+		F33B2A251B568C6300D98209 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = ../Product.m; sourceTree = "<group>"; };
+		F33B2A2A1B568E9C00D98209 /* libobjc.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.A.dylib; path = usr/lib/libobjc.A.dylib; sourceTree = SDKROOT; };
+		F33B2A2F1B568FD800D98209 /* PGObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGObjectMapping.h; sourceTree = "<group>"; };
+		F33B2A301B568FD800D98209 /* PGObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGObjectMapping.m; sourceTree = "<group>"; };
+		F33B2A321B56972000D98209 /* PGRelationshipMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGRelationshipMapping.h; sourceTree = "<group>"; };
+		F33B2A331B56972000D98209 /* PGRelationshipMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGRelationshipMapping.m; sourceTree = "<group>"; };
+		F33B2A351B569D7000D98209 /* NSString+PG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+PG.h"; path = "../NSString+PG.h"; sourceTree = "<group>"; };
+		F33B2A361B569D7000D98209 /* NSString+PG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+PG.m"; path = "../NSString+PG.m"; sourceTree = "<group>"; };
+		F33B2A391B56A5FF00D98209 /* PGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGUtils.h; sourceTree = "<group>"; };
+		F33B2A3A1B56A5FF00D98209 /* PGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGUtils.m; sourceTree = "<group>"; };
+		F33B2A3D1B56AA7E00D98209 /* PGMappableObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGMappableObject.h; sourceTree = "<group>"; };
+		F33B2A3E1B56BC2E00D98209 /* Price.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Price.h; path = ../Price.h; sourceTree = "<group>"; };
+		F33B2A3F1B56BC2E00D98209 /* Price.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Price.m; path = ../Price.m; sourceTree = "<group>"; };
+		F33B2A411B56BC7C00D98209 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Image.h; path = ../Image.h; sourceTree = "<group>"; };
+		F33B2A421B56BC7C00D98209 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Image.m; path = ../Image.m; sourceTree = "<group>"; };
+		F33B2A451B56BCA400D98209 /* Option.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Option.h; sourceTree = "<group>"; };
+		F33B2A461B56BCA400D98209 /* Option.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Option.m; sourceTree = "<group>"; };
 		F3525F0A1B56855D006867A2 /* Paragon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paragon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3525F0E1B56855D006867A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3525F0F1B56855D006867A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33B2A2B1B568E9C00D98209 /* libobjc.A.dylib in Frameworks */,
 				5E5CEA41E12D3044F21BE450 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,9 +105,34 @@
 		66CCD2D4C45CE1A3F065AF6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F33B2A2A1B568E9C00D98209 /* libobjc.A.dylib */,
 				2AF94A34C792C1EF63A5A9E1 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F33B2A381B569DE100D98209 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F33B2A351B569D7000D98209 /* NSString+PG.h */,
+				F33B2A361B569D7000D98209 /* NSString+PG.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		F33B2A441B56BC8B00D98209 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F33B2A411B56BC7C00D98209 /* Image.h */,
+				F33B2A421B56BC7C00D98209 /* Image.m */,
+				F33B2A451B56BCA400D98209 /* Option.h */,
+				F33B2A461B56BCA400D98209 /* Option.m */,
+				F33B2A241B568C6300D98209 /* Product.h */,
+				F33B2A251B568C6300D98209 /* Product.m */,
+				F33B2A3E1B56BC2E00D98209 /* Price.h */,
+				F33B2A3F1B56BC2E00D98209 /* Price.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F3525F011B56855D006867A2 = {
@@ -105,8 +158,17 @@
 		F3525F0C1B56855D006867A2 /* Paragon */ = {
 			isa = PBXGroup;
 			children = (
+				F33B2A441B56BC8B00D98209 /* Models */,
+				F33B2A381B569DE100D98209 /* Categories */,
 				F3525F111B56855D006867A2 /* AppDelegate.h */,
 				F3525F121B56855D006867A2 /* AppDelegate.m */,
+				F33B2A3D1B56AA7E00D98209 /* PGMappableObject.h */,
+				F33B2A2F1B568FD800D98209 /* PGObjectMapping.h */,
+				F33B2A301B568FD800D98209 /* PGObjectMapping.m */,
+				F33B2A321B56972000D98209 /* PGRelationshipMapping.h */,
+				F33B2A331B56972000D98209 /* PGRelationshipMapping.m */,
+				F33B2A391B56A5FF00D98209 /* PGUtils.h */,
+				F33B2A3A1B56A5FF00D98209 /* PGUtils.m */,
 				F3525F141B56855D006867A2 /* ViewController.h */,
 				F3525F151B56855D006867A2 /* ViewController.m */,
 				F3525F171B56855D006867A2 /* Main.storyboard */,
@@ -279,8 +341,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3525F161B56855D006867A2 /* ViewController.m in Sources */,
+				F33B2A3B1B56A5FF00D98209 /* PGUtils.m in Sources */,
+				F33B2A471B56BCA400D98209 /* Option.m in Sources */,
+				F33B2A261B568C6300D98209 /* Product.m in Sources */,
+				F33B2A401B56BC2E00D98209 /* Price.m in Sources */,
+				F33B2A371B569D7000D98209 /* NSString+PG.m in Sources */,
 				F3525F131B56855D006867A2 /* AppDelegate.m in Sources */,
+				F33B2A341B56972000D98209 /* PGRelationshipMapping.m in Sources */,
+				F33B2A311B568FD800D98209 /* PGObjectMapping.m in Sources */,
 				F3525F101B56855D006867A2 /* main.m in Sources */,
+				F33B2A431B56BC7C00D98209 /* Image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
