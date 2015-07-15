@@ -4,4 +4,4 @@ platform :ios, '7.0'
 
 xcodeproj 'Paragon/Paragon.xcodeproj'
 
-pod "AFNetworking", "~> 2.0
+pod "AFNetworking", "~> 2.0"

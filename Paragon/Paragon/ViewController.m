@@ -10,18 +10,19 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *productImage;
+@property (weak, nonatomic) IBOutlet UILabel *productTitle;
+@property (weak, nonatomic) IBOutlet UILabel *productRating;
+@property (weak, nonatomic) IBOutlet UILabel *productReviewCount;
+@property (weak, nonatomic) IBOutlet UILabel *productPrice;
+@property (weak, nonatomic) IBOutlet UILabel *productIngredients;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 @end
