@@ -11,4 +11,8 @@
 
 @interface Image : NSObject <PGMappableObject>
 
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, strong) NSNumber *width;  // integer, pixels
+@property (nonatomic, strong) NSNumber *height; // integer, pixels
+
 @end

@@ -40,9 +40,17 @@
                                                @"details_html" : @"detailsHTML",
                                                @"brand_id" : @"brandID",
                                                @"url_key" : @"urlKey",
-                                               @"page_button_type" : @"pageButtonType"}];
+                                               @"page_button_type" : @"pageButtonType",
+                                               @"price.amount" : @"amount"}];
+  [mapping addTransformsFromDictionary:@{@"is_free_shipping" : @(PGTransformResultTypeBOOL),
+                                         @"is_in_stock" : @(PGTransformResultTypeBOOL),
+                                         @"is_gift_with_purchase" : @(PGTransformResultTypeBOOL),
+                                         @"is_sample_with_purchase" : @(PGTransformResultTypeBOOL),
+                                         @"is_reviewable" : @(PGTransformResultTypeBOOL)}];
   [mapping addRelationshipMappingsFromArray:@[
-          [PGRelationshipMapping relationshipWithProperty:@"price" mapping:[Price mapping]]
+          [PGRelationshipMapping relationshipWithProperty:@"price" mapping:[Price mapping]],
+          [PGRelationshipMapping relationshipWithProperty:@"options" mapping:[Option mapping]],
+          [PGRelationshipMapping relationshipWithProperty:@"images" mapping:[Image mapping]]
   ]];
 
   return mapping;

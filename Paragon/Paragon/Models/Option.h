@@ -11,4 +11,8 @@
 
 @interface Option : NSObject <PGMappableObject>
 
+@property (nonatomic, strong) NSNumber *identifier; // integer
+@property (nonatomic, copy) NSString   *name;
+@property (nonatomic, copy) NSArray *values;        // BBProductOptionValue
+
 @end

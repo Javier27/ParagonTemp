@@ -7,7 +7,17 @@
 //
 
 #import "Image.h"
+#import "PGObjectMapping.h"
 
 @implementation Image
+
++ (PGObjectMapping *)mapping
+{
+  PGObjectMapping *mapping = [PGObjectMapping mappingForClass:self];
+  [mapping addPropertyMappingsFromArray:@[@"url",
+                                          @"height",
+                                          @"width"]];
+  return mapping;
+}
 
 @end
