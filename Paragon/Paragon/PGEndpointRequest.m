@@ -350,9 +350,10 @@ PGEndpointRequest* DELETE(id key, Class responseClass, NSString *path)
 
 #pragma mark Networking Manager
 
-- (PGNetworkingManager *)networkManager
+- (PGNetworkingManager *)manager
 {
-  return [PGNetworkingManager objectManager];
+  if (!_manager) _manager = [PGNetworkingManager objectManager];
+  return _manager;
 }
 
 #pragma mark String helpers

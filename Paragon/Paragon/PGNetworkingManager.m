@@ -7,8 +7,11 @@
 //
 
 #import "PGNetworkingManager.h"
+#import "PGEndpointRequest.h"
 
 @interface PGNetworkingManager ()
+
+@property (nonatomic, copy) NSDictionary *endpoints;
 
 @end
 
@@ -22,6 +25,19 @@
     instance = [[PGNetworkingManager alloc] init];
   });
   return instance;
+}
+
++ (void)storeEndpoints:(NSArray *)endpoints
+{
+  NSMutableDictionary *newEndpoints = [[NSMutableDictionary alloc] init];
+  for (PGEndpointRequest *endpoint in endpoints) {
+    NSAssert([endpoint isKindOfClass:[PGEndpointRequest class]],
+             @"One of the objects being stored in the networking manager is not an endpoint request, all objects must be endpoint requests.");
+    newEndpoints[endpoint.key] = endpoint;
+  }
+  
+  [newEndpoints addEntriesFromDictionary:[PGNetworkingManager objectManager].endpoints];
+  [PGNetworkingManager objectManager].endpoints = newEndpoints;
 }
 
 @end
