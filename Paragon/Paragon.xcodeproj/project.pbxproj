@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13446A171B5DF134001369EF /* PGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13446A161B5DF134001369EF /* PGAPIClient.m */; };
+		13446A1A1B5DF61F001369EF /* PGNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13446A191B5DF61F001369EF /* PGNetworkingManager.m */; };
+		13446A231B5E0035001369EF /* PGEndpointRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 13446A221B5E0035001369EF /* PGEndpointRequest.m */; };
 		5E5CEA41E12D3044F21BE450 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF94A34C792C1EF63A5A9E1 /* libPods.a */; };
 		F33B2A261B568C6300D98209 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B2A251B568C6300D98209 /* Product.m */; };
 		F33B2A2B1B568E9C00D98209 /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F33B2A2A1B568E9C00D98209 /* libobjc.A.dylib */; };
@@ -39,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13446A151B5DF134001369EF /* PGAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAPIClient.h; sourceTree = "<group>"; };
+		13446A161B5DF134001369EF /* PGAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGAPIClient.m; sourceTree = "<group>"; };
+		13446A181B5DF61F001369EF /* PGNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGNetworkingManager.h; sourceTree = "<group>"; };
+		13446A191B5DF61F001369EF /* PGNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGNetworkingManager.m; sourceTree = "<group>"; };
+		13446A211B5E0035001369EF /* PGEndpointRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGEndpointRequest.h; sourceTree = "<group>"; };
+		13446A221B5E0035001369EF /* PGEndpointRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGEndpointRequest.m; sourceTree = "<group>"; };
 		2AF94A34C792C1EF63A5A9E1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF7DA326440AA4E37B3947A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F33B2A241B568C6300D98209 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = ../Product.h; sourceTree = "<group>"; };
@@ -170,7 +179,13 @@
 				F33B2A381B569DE100D98209 /* Categories */,
 				F3525F111B56855D006867A2 /* AppDelegate.h */,
 				F3525F121B56855D006867A2 /* AppDelegate.m */,
+				13446A151B5DF134001369EF /* PGAPIClient.h */,
+				13446A161B5DF134001369EF /* PGAPIClient.m */,
+				13446A211B5E0035001369EF /* PGEndpointRequest.h */,
+				13446A221B5E0035001369EF /* PGEndpointRequest.m */,
 				F33B2A3D1B56AA7E00D98209 /* PGMappableObject.h */,
+				13446A181B5DF61F001369EF /* PGNetworkingManager.h */,
+				13446A191B5DF61F001369EF /* PGNetworkingManager.m */,
 				F33B2A2F1B568FD800D98209 /* PGObjectMapping.h */,
 				F33B2A301B568FD800D98209 /* PGObjectMapping.m */,
 				F33B2A321B56972000D98209 /* PGRelationshipMapping.h */,
@@ -350,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13446A1A1B5DF61F001369EF /* PGNetworkingManager.m in Sources */,
 				F3525F161B56855D006867A2 /* ViewController.m in Sources */,
 				F3E41DAF1B58B32D00296B47 /* OptionValue.m in Sources */,
 				F33B2A3B1B56A5FF00D98209 /* PGUtils.m in Sources */,
@@ -360,9 +376,11 @@
 				F3525F131B56855D006867A2 /* AppDelegate.m in Sources */,
 				F33B2A341B56972000D98209 /* PGRelationshipMapping.m in Sources */,
 				F33B2A311B568FD800D98209 /* PGObjectMapping.m in Sources */,
+				13446A171B5DF134001369EF /* PGAPIClient.m in Sources */,
 				F3525F101B56855D006867A2 /* main.m in Sources */,
 				F3E41DAC1B58A9EB00296B47 /* PGValueTransformer.m in Sources */,
 				F33B2A431B56BC7C00D98209 /* Image.m in Sources */,
+				13446A231B5E0035001369EF /* PGEndpointRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
