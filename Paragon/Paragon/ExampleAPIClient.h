@@ -10,6 +10,6 @@
 
 @interface ExampleAPIClient : PGAPIClient
 
-
+- (void)getProductWithId:(NSNumber *)productId completion:(PGCompletion)completion;
 
 @end

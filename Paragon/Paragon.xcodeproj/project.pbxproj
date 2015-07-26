@@ -33,6 +33,8 @@
 		F3DD24F71B654FE30051B4D0 /* PGBaseAPIClient+PG.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DD24F61B654FE30051B4D0 /* PGBaseAPIClient+PG.m */; };
 		F3DD24FA1B6551A80051B4D0 /* PGBaseEndpointRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DD24F91B6551A80051B4D0 /* PGBaseEndpointRequest.m */; };
 		F3DD24FD1B6551B70051B4D0 /* PGBaseEndpointRequest+PG.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DD24FC1B6551B70051B4D0 /* PGBaseEndpointRequest+PG.m */; };
+		F3DD25011B655D5D0051B4D0 /* ExampleRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DD25001B655D5D0051B4D0 /* ExampleRequestManager.m */; };
+		F3DD25041B655EB10051B4D0 /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DD25031B655EB10051B4D0 /* Error.m */; };
 		F3E41DAC1B58A9EB00296B47 /* PGValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E41DAB1B58A9EB00296B47 /* PGValueTransformer.m */; };
 		F3E41DAF1B58B32D00296B47 /* OptionValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E41DAE1B58B32D00296B47 /* OptionValue.m */; };
 /* End PBXBuildFile section */
@@ -99,6 +101,10 @@
 		F3DD24F91B6551A80051B4D0 /* PGBaseEndpointRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PGBaseEndpointRequest.m; path = ../PGBaseEndpointRequest.m; sourceTree = "<group>"; };
 		F3DD24FB1B6551B70051B4D0 /* PGBaseEndpointRequest+PG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PGBaseEndpointRequest+PG.h"; sourceTree = "<group>"; };
 		F3DD24FC1B6551B70051B4D0 /* PGBaseEndpointRequest+PG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PGBaseEndpointRequest+PG.m"; sourceTree = "<group>"; };
+		F3DD24FF1B655D5D0051B4D0 /* ExampleRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleRequestManager.h; sourceTree = "<group>"; };
+		F3DD25001B655D5D0051B4D0 /* ExampleRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleRequestManager.m; sourceTree = "<group>"; };
+		F3DD25021B655EB10051B4D0 /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
+		F3DD25031B655EB10051B4D0 /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		F3E41DAA1B58A9EB00296B47 /* PGValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PGValueTransformer.h; path = ../../PGValueTransformer.h; sourceTree = "<group>"; };
 		F3E41DAB1B58A9EB00296B47 /* PGValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PGValueTransformer.m; path = ../../PGValueTransformer.m; sourceTree = "<group>"; };
 		F3E41DAD1B58B32D00296B47 /* OptionValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionValue.h; sourceTree = "<group>"; };
@@ -162,6 +168,8 @@
 		F33B2A441B56BC8B00D98209 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F3DD25021B655EB10051B4D0 /* Error.h */,
+				F3DD25031B655EB10051B4D0 /* Error.m */,
 				F33B2A411B56BC7C00D98209 /* Image.h */,
 				F33B2A421B56BC7C00D98209 /* Image.m */,
 				F33B2A451B56BCA400D98209 /* Option.h */,
@@ -206,6 +214,8 @@
 				F3525F121B56855D006867A2 /* AppDelegate.m */,
 				F3DD24E91B651C8D0051B4D0 /* ExampleAPIClient.h */,
 				F3DD24EA1B651C8D0051B4D0 /* ExampleAPIClient.m */,
+				F3DD24FF1B655D5D0051B4D0 /* ExampleRequestManager.h */,
+				F3DD25001B655D5D0051B4D0 /* ExampleRequestManager.m */,
 				F3525F141B56855D006867A2 /* ViewController.h */,
 				F3525F151B56855D006867A2 /* ViewController.m */,
 				F3525F171B56855D006867A2 /* Main.storyboard */,
@@ -416,6 +426,7 @@
 				F3525F161B56855D006867A2 /* ViewController.m in Sources */,
 				F3DD24FA1B6551A80051B4D0 /* PGBaseEndpointRequest.m in Sources */,
 				F3DD24EB1B651C8D0051B4D0 /* ExampleAPIClient.m in Sources */,
+				F3DD25011B655D5D0051B4D0 /* ExampleRequestManager.m in Sources */,
 				F3E41DAF1B58B32D00296B47 /* OptionValue.m in Sources */,
 				F33B2A3B1B56A5FF00D98209 /* PGUtils.m in Sources */,
 				F33B2A471B56BCA400D98209 /* Option.m in Sources */,
@@ -423,6 +434,7 @@
 				F33B2A401B56BC2E00D98209 /* Price.m in Sources */,
 				F33B2A371B569D7000D98209 /* NSString+PG.m in Sources */,
 				F3525F131B56855D006867A2 /* AppDelegate.m in Sources */,
+				F3DD25041B655EB10051B4D0 /* Error.m in Sources */,
 				F33B2A341B56972000D98209 /* PGRelationshipMapping.m in Sources */,
 				F33B2A311B568FD800D98209 /* PGObjectMapping.m in Sources */,
 				13446A171B5DF134001369EF /* PGAPIClient.m in Sources */,

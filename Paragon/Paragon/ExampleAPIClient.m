@@ -7,11 +7,15 @@
 //
 
 #import "ExampleAPIClient.h"
-
-typedef enum : NSInteger {
-  ExampleEndpointGetProduct
-} ExampleEndpoint;
+#import "ExampleRequestManager.h"
 
 @implementation ExampleAPIClient
+
+- (void)getProductWithId:(NSNumber *)productId completion:(PGCompletion)completion
+{
+  [self performRequestWithEndpoint:@(ExampleEndpointGetProduct)
+                        pathSuffix:[productId stringValue]
+                        completion:completion];
+}
 
 @end

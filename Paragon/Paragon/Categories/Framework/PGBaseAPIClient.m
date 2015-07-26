@@ -17,8 +17,8 @@
 
 @interface PGBaseAPIClient ()
 
-@property (nonatomic, weak) AFHTTPRequestOperationManager *formRequestManager;
-@property (nonatomic, weak) AFHTTPRequestOperationManager *jsonRequestManager;
+@property (nonatomic, strong) AFHTTPRequestOperationManager *formRequestManager;
+@property (nonatomic, strong) AFHTTPRequestOperationManager *jsonRequestManager;
 
 @end
 
@@ -36,11 +36,13 @@
   PGEndpointRequest *request = [PGNetworkingManager requestForKey:key];
   if (!request) completion(500, nil, nil);
 
+  NSString *requestURL = request.url.absoluteString;
+
   // append the path suffix
-  NSString *requestURL = [NSString stringWithFormat:@"%@%@", request.url, suffix];
+  if (suffix) requestURL = [NSString stringWithFormat:@"%@%@", requestURL, suffix];
 
   // append the query string
-  requestURL = [NSString stringByAppendingParams:params toString:requestURL];
+  if (params) requestURL = [NSString stringByAppendingParams:params toString:requestURL];
 
   // if object present then must have a mapping to match
   NSDictionary *requestBody;
@@ -112,14 +114,17 @@
 
 - (AFHTTPRequestOperationManager *)formRequestManager
 {
-  if (!_formRequestManager) _formRequestManager = [AFHTTPRequestOperationManager manager];
-  _formRequestManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+  if (!_formRequestManager) {
+    _formRequestManager = [AFHTTPRequestOperationManager manager];
+    _formRequestManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+  }
+
   return _formRequestManager;
 }
 
 - (AFHTTPRequestOperationManager *)jsonRequestManager
 {
-  if (!_jsonRequestManager){
+  if (!_jsonRequestManager) {
     _jsonRequestManager = [AFHTTPRequestOperationManager manager];
     _jsonRequestManager.requestSerializer = [AFJSONRequestSerializer serializer];
   }

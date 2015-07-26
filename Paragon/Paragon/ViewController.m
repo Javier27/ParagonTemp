@@ -7,10 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "AFHTTPRequestOperationManager.h"
-#import "PGObjectMapping.h"
 #import "Product.h"
 #import "Price.h"
+#import "ExampleAPIClient.h"
 
 @interface ViewController ()
 
@@ -20,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *productReviewCount;
 @property (weak, nonatomic) IBOutlet UILabel *productPrice;
 @property (weak, nonatomic) IBOutlet UILabel *productIngredients;
+
+@property (nonatomic, strong) ExampleAPIClient *apiClient;
 
 @end
 
@@ -32,23 +33,10 @@
 
 - (void)fetchProduct
 {
-  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-  [manager GET:@"https://api.birchbox.com/products/59" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    NSLog(@"JSON: %@", responseObject);
-    Product *product = [[Product mapping] objectFromDictionary:responseObject];
-    if (product) [self updateWithProduct:product];
-  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    NSLog(@"Error: %@", error);
+  _apiClient = [[ExampleAPIClient alloc] init];
+  [_apiClient getProductWithId:@(59) completion:^(id response, id error) {
+    if (response) [self updateWithProduct:response];
   }];
-  [manager POST:@"https://api.birchbox.com/user/login"
-     parameters:@{@"email" : @"sldkfjs@SLKjf.com", @"password" : @"laksdjflkasj"}
-        success:^(AFHTTPRequestOperation *operation, id responseObject) {
-          int i = 0;
-          i++;
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-          int i = 0;
-          i++;
-        }];
 }
 
 - (void)updateWithProduct:(Product *)product

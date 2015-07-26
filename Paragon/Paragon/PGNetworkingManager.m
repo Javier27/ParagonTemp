@@ -57,7 +57,7 @@
 {
   NSMutableDictionary *newEndpoints = [[NSMutableDictionary alloc] init];
   for (PGEndpointRequest *endpoint in endpoints) {
-    NSAssert([endpoint isKindOfClass:[PGEndpointRequest class]],
+    NSAssert([endpoint isKindOfClass:[PGBaseEndpointRequest class]],
              @"One of the objects being stored in the networking manager is not an endpoint request, all objects must be endpoint requests.");
     newEndpoints[endpoint.key] = endpoint;
   }
