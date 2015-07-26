@@ -11,6 +11,11 @@
 
 @interface PGNetworkingManager ()
 
+@property (nonatomic, strong, readwrite) NSURL *baseUrl;
+@property (nonatomic, strong, readwrite) Class errorClass;
+@property (nonatomic, readwrite) RequestEncodingMIMEType encodingType;
+@property (nonatomic, copy, readwrite) NSDictionary *requestHeaders;
+
 @property (nonatomic, copy) NSDictionary *endpoints;
 
 @end
@@ -23,8 +28,29 @@
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     instance = [[PGNetworkingManager alloc] init];
+    instance.baseUrl = [NSURL URLWithString:@""];
+    instance.errorClass = nil;
+    instance.encodingType = RequestAcceptEncodingMIMETypeForm;
+    instance.requestHeaders = @{};
   });
   return instance;
+}
+
++ (void)setupWithBaseUrl:(NSURL *)baseUrl
+              errorClass:(Class)errorClass
+            encodingType:(RequestEncodingMIMEType)encodingType
+                 headers:(NSDictionary *)requestHeaders
+{
+  PGNetworkingManager *manager = [PGNetworkingManager objectManager];
+  manager.baseUrl = baseUrl;
+  manager.errorClass = errorClass;
+  manager.encodingType = encodingType;
+  manager.requestHeaders = requestHeaders;
+}
+
++ (void)updateWithHeaders:(NSDictionary *)headers
+{
+  [PGNetworkingManager objectManager].requestHeaders = headers;
 }
 
 + (void)storeEndpoints:(NSArray *)endpoints
