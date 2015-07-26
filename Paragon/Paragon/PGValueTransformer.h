@@ -10,7 +10,6 @@
 
 typedef NS_ENUM(NSInteger, PGTransformResultType) {
   PGTransformResultTypeBOOL,
-  PGTransformResultTypeChar,
   PGTransformResultTypeDouble,
   PGTransformResultTypeFloat,
   PGTransformResultTypeInt,

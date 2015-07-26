@@ -15,7 +15,10 @@
 @property (nonatomic, strong) Class errorClass;
 @property (nonatomic) RequestEncodingMIMEType encodingType;
 @property (nonatomic) RequestAcceptEncodingMIMEType decodingType;
+@property (nonatomic, copy) NSDictionary *requestHeaders;
 
 + (instancetype)objectManager;
++ (void)storeEndpoints:(NSArray *)endpoints;
++ (PGEndpointRequest *)requestForKey:(id)key;
 
 @end

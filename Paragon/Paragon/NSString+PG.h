@@ -11,5 +11,7 @@
 @interface NSString (PG)
 
 - (BOOL)hasSubstring:(NSString *)substring;
++ (NSString *)stringByAppendingParams:(NSDictionary *)params toUrl:(NSURL *)url;
++ (NSString *)stringByAppendingParams:(NSDictionary *)params toString:(NSString *)url;
 
 @end

@@ -32,4 +32,7 @@
 // returns an instance object from a dictionary of values corresponding to the mapping
 - (id)objectFromDictionary:(NSDictionary *)dictionary;
 
+// returns a dictionary from an object
+- (NSDictionary *)dictionaryFromObject:(id)object;
+
 @end

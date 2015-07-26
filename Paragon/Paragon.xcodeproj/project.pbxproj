@@ -27,6 +27,7 @@
 		F3525F1B1B56855D006867A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3525F1A1B56855D006867A2 /* Images.xcassets */; };
 		F3525F1E1B56855D006867A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3525F1C1B56855D006867A2 /* LaunchScreen.xib */; };
 		F3525F2A1B56855D006867A2 /* ParagonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3525F291B56855D006867A2 /* ParagonTests.m */; };
+		F3DD24E71B6456600051B4D0 /* NSDictionary+PG.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DD24E61B6456600051B4D0 /* NSDictionary+PG.m */; };
 		F3E41DAC1B58A9EB00296B47 /* PGValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E41DAB1B58A9EB00296B47 /* PGValueTransformer.m */; };
 		F3E41DAF1B58B32D00296B47 /* OptionValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E41DAE1B58B32D00296B47 /* OptionValue.m */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,8 @@
 		F3525F231B56855D006867A2 /* ParagonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParagonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3525F281B56855D006867A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3525F291B56855D006867A2 /* ParagonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParagonTests.m; sourceTree = "<group>"; };
+		F3DD24E51B6456600051B4D0 /* NSDictionary+PG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+PG.h"; sourceTree = "<group>"; };
+		F3DD24E61B6456600051B4D0 /* NSDictionary+PG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+PG.m"; sourceTree = "<group>"; };
 		F3E41DAA1B58A9EB00296B47 /* PGValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGValueTransformer.h; sourceTree = "<group>"; };
 		F3E41DAB1B58A9EB00296B47 /* PGValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGValueTransformer.m; sourceTree = "<group>"; };
 		F3E41DAD1B58B32D00296B47 /* OptionValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionValue.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 			children = (
 				F33B2A351B569D7000D98209 /* NSString+PG.h */,
 				F33B2A361B569D7000D98209 /* NSString+PG.m */,
+				F3DD24E51B6456600051B4D0 /* NSDictionary+PG.h */,
+				F3DD24E61B6456600051B4D0 /* NSDictionary+PG.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				F3E41DAC1B58A9EB00296B47 /* PGValueTransformer.m in Sources */,
 				F33B2A431B56BC7C00D98209 /* Image.m in Sources */,
 				13446A231B5E0035001369EF /* PGEndpointRequest.m in Sources */,
+				F3DD24E71B6456600051B4D0 /* NSDictionary+PG.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

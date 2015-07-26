@@ -10,6 +10,7 @@
 #import "PGRelationshipMapping.h"
 #import "PGUtils.h"
 #import "NSString+PG.h"
+#import "NSDictionary+PG.h"
 #import <objc/runtime.h>
 
 @interface PGObjectMapping ()
@@ -99,7 +100,7 @@
         }
         idx++;
       }
-    } else {
+    } else if (dictionary[splitKey[0]]) {
       propertyObject = dictionary[splitKey[0]];
     }
 
@@ -140,7 +141,7 @@
         }
         idx++;
       }
-    } else {
+    } else if (dictionary[splitKey[0]]) {
       propertyObject = dictionary[splitKey[0]];
     }
 
@@ -163,6 +164,49 @@
       NSAssert(objectHasClass, error);
     }
     [result setValue:propertyObject forKey:mapping.propertyName];
+  }
+
+  return result;
+}
+
+- (NSDictionary *)dictionaryFromObject:(id)object
+{
+  if (!object) return nil;
+
+  NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
+
+  // start with base mapping
+  for (NSString *key in self.baseMappings) {
+    NSString *error = [NSString stringWithFormat:@"mapping for %s failed, this class has no property %@", class_getName(self.mappingClass), self.baseMappings[key]];
+    NSAssert([object respondsToSelector:NSSelectorFromString(self.baseMappings[key])], error);
+
+    id propertyObject = [object propertyForKey:self.baseMappings[key]];
+    propertyObject = propertyObject ? propertyObject : [NSNull null];
+
+    NSArray *splitKey = [key componentsSeparatedByString:@"."];
+    if (splitKey.count > 1) {
+      NSDictionary *generatedDictionary = [NSDictionary dictionaryFromKeyArray:splitKey finalObject:propertyObject];
+      result = [[result mergeWithDictionary:generatedDictionary] mutableCopy];
+    } else {
+      result[key] = propertyObject;
+    }
+  }
+
+  // now handle relationship mappings
+  for (PGRelationshipMapping *mapping in self.relationshipMappings) {
+    NSString *error = [NSString stringWithFormat:@"mapping for %s failed, this class has no property %@", class_getName(self.mappingClass), mapping.propertyName];
+    NSAssert([object respondsToSelector:NSSelectorFromString(mapping.propertyName)], error);
+
+    id propertyObject = [object propertyForKey:mapping.propertyName];
+    propertyObject = propertyObject ? propertyObject : [NSNull null];
+
+    NSArray *splitKey = [mapping.inboundKey componentsSeparatedByString:@"."];
+    if (splitKey.count > 1) {
+      NSDictionary *generatedDictionary = [NSDictionary dictionaryFromKeyArray:splitKey finalObject:propertyObject];
+      result = [[result mergeWithDictionary:generatedDictionary] mutableCopy];
+    } else {
+      result[mapping.inboundKey] = propertyObject;
+    }
   }
 
   return result;

@@ -31,10 +31,11 @@ typedef NS_ENUM (NSInteger, RequestType) {
 @property (nonatomic, strong, readonly) Class bodyClass;
 @property (nonatomic, strong, readonly) Class responseClass;
 @property (nonatomic, strong, readonly) Class errorClass;
-@property (nonatomic, copy, readonly) NSString *rootKey;
+@property (nonatomic, copy, readonly) NSString *rootBodyKey;
+@property (nonatomic, copy, readonly) NSString *rootResponseKey;
+@property (nonatomic, copy, readonly) NSString *rootErrorKey;
 @property (nonatomic, copy, readonly) NSURL *url;
 @property (nonatomic, readonly) RequestEncodingMIMEType encodingType;
-@property (nonatomic, readonly) RequestAcceptEncodingMIMEType decodingType;
 @property (nonatomic, readonly) RequestType requestType;
 
 // Initializer Methods

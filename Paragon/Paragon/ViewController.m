@@ -40,6 +40,15 @@
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     NSLog(@"Error: %@", error);
   }];
+  [manager POST:@"https://api.birchbox.com/user/login"
+     parameters:@{@"email" : @"sldkfjs@SLKjf.com", @"password" : @"laksdjflkasj"}
+        success:^(AFHTTPRequestOperation *operation, id responseObject) {
+          int i = 0;
+          i++;
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+          int i = 0;
+          i++;
+        }];
 }
 
 - (void)updateWithProduct:(Product *)product

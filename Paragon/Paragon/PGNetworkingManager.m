@@ -40,4 +40,9 @@
   [PGNetworkingManager objectManager].endpoints = newEndpoints;
 }
 
++ (PGEndpointRequest *)requestForKey:(id)key
+{
+  return [PGNetworkingManager objectManager].endpoints[key];
+}
+
 @end
