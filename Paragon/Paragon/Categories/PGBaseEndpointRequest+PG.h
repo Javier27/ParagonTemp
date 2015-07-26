@@ -76,7 +76,7 @@
                       errorClass:(Class)errorClass
                              url:(NSString *)url;
 
-// convenience Methods
+// pure convenience methods
 
 PGBaseEndpointRequest* GET(id key, Class responseClass, NSString *path);
 PGBaseEndpointRequest* POST(id key, Class bodyClass, Class responseClass, NSString *path);

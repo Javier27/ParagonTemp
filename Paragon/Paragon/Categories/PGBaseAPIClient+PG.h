@@ -86,7 +86,7 @@
                             object:(id)object
                         completion:(PGCompletion)completion;
 
-// convenience methods
+// pure convenience methods
 
 void PGRequestWithCodes(PGBaseAPIClient *client,
                         id requestKey,
